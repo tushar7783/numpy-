@@ -155,7 +155,7 @@ scores[scores < 60] = 0
 print(scores)   # Updated array
 
 
-import numpy as np
+
 
 # Broadcasting:
 # NumPy automatically expands the smaller dimension
