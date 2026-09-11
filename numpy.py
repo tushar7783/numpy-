@@ -154,3 +154,30 @@ scores[scores < 60] = 0
 
 print(scores)   # Updated array
 
+
+import numpy as np
+
+# Broadcasting:
+# NumPy automatically expands the smaller dimension
+# so that arrays with compatible shapes can participate
+# in arithmetic operations.
+
+array1 = np.array([[1, 2, 3, 4]])  # Shape = (1, 4)
+array2 = np.array([[1],
+                   [2],
+                   [3],
+                   [4]])           # Shape = (4, 1)
+
+print(array1.shape)
+print(array2.shape)
+
+# Broadcasting occurs here
+# array1: (1,4) -> repeated 4 times vertically
+# array2: (4,1) -> repeated 4 times horizontally
+
+result = array1 + array2
+
+print(result)
+print(result.shape)
+
+
