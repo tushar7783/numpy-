@@ -154,8 +154,7 @@ scores[scores < 60] = 0
 
 print(scores)   # Updated array
 
-
-
+print('-----------------------------------------------')
 
 # Broadcasting:
 # NumPy automatically expands the smaller dimension
@@ -179,5 +178,97 @@ result = array1 + array2
 
 print(result)
 print(result.shape)
+
+
+# Broadcasting:
+# If two arrays have compatible shapes, NumPy automatically
+# expands the smaller dimension without creating extra copies.
+#
+# (1,4) + (4,1)
+#   ↓       ↓
+# (4,4) + (4,4)
+#
+# Result Shape = (4,4)
+
+print('-----------------------------------------------')
+
+
+# 2D Array
+arr = np.array([
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90]
+])
+
+print(arr)
+
+# ------------------------------------
+# Aggregate Functions
+# ------------------------------------
+
+# Sum of all elements
+print("Sum =", np.sum(arr))
+
+# Mean (Average)
+print("Mean =", np.mean(arr))
+
+# Median (Middle value)
+print("Median =", np.median(arr))
+
+# Minimum value
+print("Min =", np.min(arr))
+
+# Maximum value
+print("Max =", np.max(arr))
+
+# Standard Deviation
+print("Std =", np.std(arr))
+
+# Variance
+print("Variance =", np.var(arr))
+
+# Product of all elements
+print("Product =", np.prod(arr))
+
+# ------------------------------------
+# Axis-wise Aggregation
+# ------------------------------------
+
+# axis=0 → Column-wise operation
+print("Column Sum =", np.sum(arr, axis=0))
+
+# axis=1 → Row-wise operation
+print("Row Sum =", np.sum(arr, axis=1))
+
+print("Column Mean =", np.mean(arr, axis=0))
+print("Row Mean =", np.mean(arr, axis=1))
+
+print("Column Min =", np.min(arr, axis=0))
+print("Row Min =", np.min(arr, axis=1))
+
+print("Column Max =", np.max(arr, axis=0))
+print("Row Max =", np.max(arr, axis=1))
+
+# ------------------------------------
+# Index-based Aggregate Functions
+# ------------------------------------
+
+# Index of largest element
+print("Argmax =", np.argmax(arr))
+
+# Index of smallest element
+print("Argmin =", np.argmin(arr))
+
+# ------------------------------------
+# Cumulative Aggregate Functions
+# ------------------------------------
+
+# Running sum
+print("Cumulative Sum =", np.cumsum(arr))
+
+# Running product
+print("Cumulative Product =", np.cumprod(arr))
+
+
 
 
